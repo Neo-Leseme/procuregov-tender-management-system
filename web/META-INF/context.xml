@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/ProcureGov">
+  <!--
+    JNDI DataSource — MySQL via XAMPP/MariaDB on Ubuntu (Africa/Maseru = UTC+2).
+
+    IMPORTANT — serverTimezone:
+    Setting serverTimezone=Africa/Maseru forces MySQL to interpret all DATETIME
+    values in Lesotho local time (UTC+2), matching the JVM timezone.
+    Without this, MySQL's NOW() runs in UTC and timestamps stored from Java
+    (which uses local time) are compared incorrectly  causing tenders to
+    auto-close 2 hours early and closing_datetime to be saved 2 hours behind.
+    -->
+  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" logAbandoned="true" maxIdle="10" maxTotal="20" maxWaitMillis="10000" minEvictableIdleTimeMillis="60000" minIdle="2" name="jdbc/ProcureGovDB" password="" removeAbandonedOnBorrow="true" removeAbandonedTimeout="60" testOnBorrow="true" testWhileIdle="true" timeBetweenEvictionRunsMillis="30000" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/ProcureGovDB?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Africa%2FMaseru&amp;characterEncoding=UTF-8" username="root" validationQuery="SELECT 1"/>
+</Context>

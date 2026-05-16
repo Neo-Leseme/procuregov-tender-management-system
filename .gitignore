@@ -1,0 +1,29 @@
+# Java / NetBeans build output
+build/
+dist/
+*.class
+*.war
+
+# NetBeans private machine-specific settings
+nbproject/private/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.bkp
+~$*
+.$*
+
+# Uploaded runtime files
+uploads/
+procuregov-uploads/
+
+# IDE files
+.idea/
+.vscode/
